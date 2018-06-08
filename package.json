@@ -1,5 +1,5 @@
 {
-  "name": "hackernews-graphql-js",
+  "name": "free-courses-back-end",
   "scripts": {
     "start": "node src/index.js",
     "babel-node": "babel-node --presets=latest",
@@ -27,5 +27,10 @@
     "presets": [
       "latest"
     ]
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Leocardoso94/free-courses-back-end.git",
+  "author": "Leonardo Cardoso <leocardosoti@gmail.com>",
+  "license": "MIT"
 }
