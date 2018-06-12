@@ -1,4 +1,5 @@
 
 type Query {
   info: String!
+  categories: String
 }

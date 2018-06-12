@@ -1,4 +1,8 @@
-import { getGSheetsValueCategories } from '../utils';
+import {
+  getGSheetsValueCategories,
+  getGSheetsValueCourses,
+  normalizeSheetsData,
+} from '../utils';
 
 // async function feed(parent, args, ctx, info) {
 //   const { filter, first, skip } = args // destructure input arguments
@@ -18,12 +22,18 @@ import { getGSheetsValueCategories } from '../utils';
 // }
 
 export const info = async () => {
-  try {
-    const data = await getGSheetsValueCategories();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
+  const sheetsData = await getGSheetsValueCourses();
+
+  const courses = normalizeSheetsData(sheetsData);
+
+  console.log(courses[1]);
+
   return '';
 };
 
+
+export const categories = async () => {
+  const data = await getGSheetsValueCategories();
+
+  return '';
+};
