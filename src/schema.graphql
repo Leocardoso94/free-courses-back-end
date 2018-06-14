@@ -1,5 +1,10 @@
-
 type Query {
-  info: String!
-  categories: String
+  categories(offset: Int, limit: Int): [Category]!
+  findCategoryById(id: ID!): Category!
+}
+
+type Category {
+  id: ID!
+  title: String!
+  icon: String!
 }
