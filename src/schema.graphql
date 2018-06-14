@@ -1,10 +1,26 @@
 type Query {
   categories(offset: Int, limit: Int): [Category]!
   findCategoryById(id: ID!): Category!
+  courses(offset: Int, limit: Int): [Course]!
+  findCourseById(id: ID!): Course!
+  filterByCategory(categoryTitle: String!, offset: Int, limit: Int): [Course]!
 }
 
 type Category {
   id: ID!
   title: String!
   icon: String!
+}
+
+type Course {
+  id: ID!
+  title: String!
+  description: String!
+  link: String!
+  author: String!
+  level: String!
+  categories: [String]!
+  language: String!
+  image: String
+  slug: String!
 }

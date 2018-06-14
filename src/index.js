@@ -2,8 +2,6 @@ require('dotenv').config();
 const { GraphQLServer } = require('graphql-yoga');
 const Query = require('./resolvers/Query');
 
-// const Feed = require('./resolvers/Feed')
-
 const resolvers = {
   Query,
 };
