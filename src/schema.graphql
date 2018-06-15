@@ -4,6 +4,7 @@ type Query {
   courses(offset: Int, limit: Int): [Course]!
   findCourseById(id: ID!): Course!
   filterByCategory(categoryTitle: String!, offset: Int, limit: Int): [Course]!
+  filterCategory(title: String): [Category]!
 }
 
 type Category {
